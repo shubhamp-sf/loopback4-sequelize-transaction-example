@@ -3,7 +3,6 @@ import {
   CountSchema,
   Filter,
   FilterExcludingWhere,
-  IsolationLevel,
   repository,
   Where,
 } from '@loopback/repository';
@@ -18,6 +17,7 @@ import {
   requestBody,
   response,
 } from '@loopback/rest';
+import {Transaction} from 'loopback4-sequelize';
 import {User} from '../models';
 import {UserRepository} from '../repositories';
 
@@ -36,7 +36,7 @@ export class UserController {
     // Begin a new transaction.
     // It's also possible to call `userRepo.dataSource.beginTransaction` instead.
     const tx = await this.userRepository.beginTransaction({
-      isolationLevel: IsolationLevel.SERIALIZABLE,
+      isolationLevel: Transaction.ISOLATION_LEVELS.SERIALIZABLE,
     });
 
     try {

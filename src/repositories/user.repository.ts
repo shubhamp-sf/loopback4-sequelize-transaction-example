@@ -1,9 +1,9 @@
 import {inject} from '@loopback/core';
-import {DefaultTransactionalRepository} from '@loopback/repository';
+import {SequelizeCrudRepository} from 'loopback4-sequelize';
 import {DbDataSource} from '../datasources';
 import {User, UserRelations} from '../models';
 
-export class UserRepository extends DefaultTransactionalRepository<
+export class UserRepository extends SequelizeCrudRepository<
   User,
   typeof User.prototype.id,
   UserRelations
