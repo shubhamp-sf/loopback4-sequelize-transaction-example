@@ -50,6 +50,7 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
+!loopback4-sequelize-2.1.0-new.tgz
 
 # Yarn Integrity file
 .yarn-integrity
