@@ -1,5 +1,5 @@
 import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
-import {SequelizeDataSource} from 'loopback4-sequelize';
+import {SequelizeDataSource} from '@loopback/sequelize';
 
 const config = {
   name: 'db',

@@ -17,7 +17,7 @@ import {
   requestBody,
   response,
 } from '@loopback/rest';
-import {Transaction} from 'loopback4-sequelize';
+import {Transaction} from '@loopback/sequelize';
 import {User} from '../models';
 import {UserRepository} from '../repositories';
 
@@ -62,7 +62,7 @@ export class UserController {
       await tx.commit();
 
       // user after commit
-      return this.userRepository.findById(user.id);
+      return await this.userRepository.findById(user.id);
     } catch (error) {
       // If the execution reaches this line, an error was thrown.
       // We rollback the transaction.

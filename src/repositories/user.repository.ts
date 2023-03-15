@@ -1,5 +1,5 @@
 import {inject} from '@loopback/core';
-import {SequelizeCrudRepository} from 'loopback4-sequelize';
+import {SequelizeCrudRepository} from '@loopback/sequelize';
 import {DbDataSource} from '../datasources';
 import {User, UserRelations} from '../models';
 

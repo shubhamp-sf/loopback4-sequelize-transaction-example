@@ -54,9 +54,9 @@
     "@loopback/repository": "^5.1.3",
     "@loopback/rest": "^12.0.8",
     "@loopback/rest-explorer": "^5.0.8",
+    "@loopback/sequelize": "file:loopback-sequelize-0.1.0.tgz",
     "@loopback/service-proxy": "^5.0.8",
     "loopback-connector-postgresql": "^5.5.2",
-    "loopback4-sequelize": "file:loopback4-sequelize-2.1.0-new.tgz",
     "tslib": "^2.0.0"
   },
   "devDependencies": {
